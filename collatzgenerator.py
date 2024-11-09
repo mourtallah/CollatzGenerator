@@ -16,8 +16,13 @@ import random
 import matplotlib.pyplot as plt
 
 # User input
-user_input = int(input("Enter a number: "))
-starting_number = user_input
+while True:
+    try:
+        user_input = int(input("Enter a number: "))
+        starting_number = user_input
+        break
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
 
 # Initialize sequence and stopping time
 collatz_sequence = []
